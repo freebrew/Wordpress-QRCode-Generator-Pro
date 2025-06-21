@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WordPress QR Code Generator Pro - Documentation</title>
+    <style>
+        body { font-family: Arial, sans-serif; color: #222; background: #fff; margin: 0; padding: 0; }
+        .container { max-width: 950px; margin: 0 auto; padding: 30px; }
+        h1, h2, h3, h4 { color: #2c3e50; }
+        h1 { font-size: 2.2em; margin-bottom: 0.2em; }
+        h2 { font-size: 1.4em; margin-top: 2em; }
+        h3 { font-size: 1.1em; margin-top: 1.5em; }
+        .nav { background: #f5f7fa; border-bottom: 1px solid #e1e1e1; padding: 18px 0 12px 0; margin-bottom: 2em; }
+        .nav a { color: #2271b1; text-decoration: none; margin: 0 18px; font-weight: bold; font-size: 1.08em; }
+        .nav a:hover, .nav a.active { text-decoration: underline; color: #1a4e8a; }
+        .section { margin-bottom: 2.5em; }
+        .screenshot { background: #f5f5f5; border: 1px dashed #bbb; color: #888; text-align: center; padding: 30px; margin: 18px 0; border-radius: 6px; font-size: 1.1em; }
+        .callout { background: #eaf6ff; border-left: 4px solid #2271b1; padding: 12px 18px; margin: 18px 0; border-radius: 4px; }
+        code, pre { background: #f5f5f5; color: #333; padding: 2px 4px; border-radius: 3px; }
+        pre { padding: 10px; overflow-x: auto; }
+        ul, ol { margin-bottom: 1.2em; }
+        .footer { margin-top: 3em; font-size: 0.95em; color: #888; text-align: center; border-top: 1px solid #eee; padding-top: 1.5em; }
+        .toc ul { list-style: none; padding: 0; }
+        .toc li { margin: 0.3em 0; }
+        .credits ul { margin: 0; padding-left: 1.2em; }
+        .btn { display: inline-block; background: #2271b1; color: #fff; padding: 7px 18px; border-radius: 4px; text-decoration: none; margin: 0 4px; font-size: 1em; }
+        .btn:hover { background: #1a4e8a; }
+        @media (max-width: 700px) { .container { padding: 10px; } .nav { font-size: 0.95em; } }
+    </style>
+    <script>
+        // Simple navigation scroll
+        function scrollToSection(id) {
+            document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
+            document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+            document.querySelector('.nav a[href="#'+id+'"]').classList.add('active');
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="nav">
+        <a href="#welcome" onclick="scrollToSection('welcome');return false;">Welcome</a>
+        <a href="#features" onclick="scrollToSection('features');return false;">Features</a>
+        <a href="#install" onclick="scrollToSection('install');return false;">Installation</a>
+        <a href="#admin" onclick="scrollToSection('admin');return false;">Admin Guide</a>
+        <a href="#architecture" onclick="scrollToSection('architecture');return false;">Technical</a>
+        <a href="#api" onclick="scrollToSection('api');return false;">Developer API</a>
+        <a href="#troubleshooting" onclick="scrollToSection('troubleshooting');return false;">Troubleshooting</a>
+        <a href="#changelog" onclick="scrollToSection('changelog');return false;">Changelog</a>
+        <a href="#credits" onclick="scrollToSection('credits');return false;">Credits</a>
+    </div>
+
+    <!-- Welcome / Overview -->
+    <div class="section" id="welcome">
+        <h1>WordPress QR Code Generator Pro</h1>
+        <div class="callout">
+            <strong>Version:</strong> 1.0.0<br>
+            <strong>Author:</strong> Bruno Brottes<br>
+            <strong>Support:</strong> <a href="mailto:contact@brunobrottes.com">contact@brunobrottes.com</a><br>
+            <strong>Website:</strong> <a href="https://brunobrottes.com" target="_blank">https://brunobrottes.com</a>
+        </div>
+        <p><strong>WordPress QR Code Generator Pro</strong> is a professional plugin for WooCommerce that lets you generate, manage, and track QR codes for your products, categories, shop, and custom URLs. It features beautiful PDF templates, advanced analytics, and a bulk management interface that feels just like native WordPress.</p>
+        <div class="callout"><strong>Who is this for?</strong><br>Store owners, marketers, agencies, and developers who want to boost sales, print professional QR codes, and track real-world engagement.</div>
+    </div>
+
+    <!-- Features -->
+    <div class="section" id="features">
+        <h2>Features</h2>
+        <ul>
+            <li><strong>Professional PDF Generation:</strong> 2x2 product layouts, ink-efficient color, single-page, print-ready.</li>
+            <li><strong>Multiple QR Types:</strong> Product, Category, Shop, Custom URL.</li>
+            <li><strong>Bulk Management:</strong> WordPress-style table, checkboxes, bulk actions, filtering, sorting.</li>
+            <li><strong>Smart Duplicate Prevention:</strong> Only products without QR codes are shown for new generation.</li>
+            <li><strong>Real-Time Analytics:</strong> Track scans, conversions, revenue, and more.</li>
+            <li><strong>WooCommerce Deep Integration:</strong> HPOS support, native price formatting, category support.</li>
+            <li><strong>Security:</strong> Nonce verification, input sanitization, XSS/CSRF protection.</li>
+            <li><strong>Mobile Responsive:</strong> Admin interface works on all devices.</li>
+            <li><strong>Comprehensive Documentation:</strong> For both end users and developers.</li>
+        </ul>
+        <div class="screenshot">Screenshot: Dashboard Overview</div>
+        <h3>How it helps you</h3>
+        <ul>
+            <li><strong>For Store Owners:</strong> Print QR codes for products, track real-world marketing, and boost conversions.</li>
+            <li><strong>For Marketers:</strong> Analyze campaign performance, export PDFs, and manage QR codes in bulk.</li>
+            <li><strong>For Developers:</strong> Extend with hooks, REST/AJAX endpoints, and custom templates.</li>
+        </ul>
+        <div class="screenshot">Screenshot: PDF Template Example</div>
+    </div>
+
+    <!-- Installation & Requirements -->
+    <div class="section" id="install">
+        <h2>Installation & Requirements</h2>
+        <h3>Requirements</h3>
+        <ul>
+            <li>WordPress 6.0 or higher</li>
+            <li>WooCommerce 7.0 or higher</li>
+            <li>PHP 7.4 or higher (PHP 8+ recommended)</li>
+            <li>MySQL 5.7+ or MariaDB 10.3+</li>
+            <li>GD extension enabled (for QR image generation)</li>
+            <li>SSL certificate (recommended for secure QR links)</li>
+        </ul>
+        <h3>Installation Steps</h3>
+        <ol>
+            <li>Unzip the plugin package from CodeCanyon.</li>
+            <li>Upload <code>wordpress-qr-code-generator-pro</code> to <code>wp-content/plugins/</code>.</li>
+            <li>Activate via <strong>Plugins &gt; Installed Plugins</strong> in your WordPress admin.</li>
+            <li>Go to <strong>QR Codes &gt; Dashboard</strong> to start generating QR codes.</li>
+        </ol>
+        <div class="callout"><strong>Note:</strong> On first activation, the plugin will create all required database tables and directories automatically.</div>
+    </div>
+
+    <!-- Admin Interface Guide -->
+    <div class="section" id="admin">
+        <h2>Admin Interface Guide</h2>
+        <h3>Dashboard Overview</h3>
+        <div class="screenshot">Screenshot: Dashboard with Summary Cards</div>
+        <ul>
+            <li><strong>Summary Cards:</strong> See total scans, visitors, conversions, revenue, and conversion rate at a glance.</li>
+            <li><strong>Generate QR Code Form:</strong> Choose QR type, product/category, template options, and size. Only products without QR codes are shown.</li>
+            <li><strong>Performance Table:</strong> Manage all QR codes with checkboxes, bulk actions (enable, disable, delete, regenerate), and filters (category, status).</li>
+        </ul>
+        <h3>Generating a QR Code</h3>
+        <ol>
+            <li>Choose QR type (Product, Category, Shop, Custom URL).</li>
+            <li>Select the product or category (if applicable).</li>
+            <li>Pick template options (header, footer, navigation, sidebar).</li>
+            <li>Choose QR code size (150px-400px).</li>
+            <li>Click <strong>Generate QR Code Template</strong>.</li>
+            <li>Download the PDF or preview the template.</li>
+        </ol>
+        <div class="screenshot">Screenshot: Generate QR Code Form</div>
+        <h3>Managing QR Codes</h3>
+        <ul>
+            <li>Use checkboxes to select multiple QR codes.</li>
+            <li>Bulk actions: Enable, Disable, Delete, Regenerate.</li>
+            <li>Filter by category or status using dropdowns above the table.</li>
+            <li>Sort columns by clicking headers (product, scans, conversions, revenue, date).</li>
+            <li>Download PDF, view product, or delete via row actions.</li>
+        </ul>
+        <div class="screenshot">Screenshot: QR Code Management Table</div>
+    </div>
+
+    <!-- Technical Architecture -->
+    <div class="section" id="architecture">
+        <h2>Technical Architecture</h2>
+        <h3>File Structure</h3>
+        <pre>wordpress-qr-code-generator-pro/
+├── wordpress-qr-code-generator.php
+├── uninstall.php
+├── admin/
+│   ├── class-admin.php
+│   ├── class-qr-codes-list-table.php
+│   ├── views/
+│   ├── css/
+│   └── js/
+├── includes/
+│   ├── class-wp-qr-generator.php
+│   ├── class-qr-generator.php
+│   ├── class-template-generator.php
+│   ├── class-pdf-generator.php
+│   └── class-error-handler.php
+├── public/
+├── vendor/ (TCPDF, QR libraries)
+├── assets/
+├── languages/
+└── logs/
+</pre>
+        <h3>Database Schema</h3>
+        <pre>wp_qr_codes
+- id (PK)
+- product_id (FK)
+- qr_code_data
+- file_path
+- file_url
+- status (active/inactive)
+- created_at
+
+wp_qr_scans
+- id (PK)
+- qr_code_id (FK)
+- scan_time
+- ip_address
+- user_agent
+
+wp_qr_conversions
+- id (PK)
+- scan_id (FK)
+- order_id (WooCommerce)
+- conversion_time
+- revenue
+</pre>
+        <h3>Technologies Used</h3>
+        <ul>
+            <li><strong>WordPress</strong> (plugin API, admin UI, security)</li>
+            <li><strong>WooCommerce</strong> (product, order, category integration)</li>
+            <li><strong>TCPDF</strong> (PDF generation)</li>
+            <li><strong>PHP GD</strong> (QR image generation)</li>
+            <li><strong>jQuery</strong> (admin UI interactivity)</li>
+            <li><strong>AJAX/REST</strong> (admin operations, extensibility)</li>
+        </ul>
+        <h3>Security & Best Practices</h3>
+        <ul>
+            <li>All AJAX endpoints protected by nonces</li>
+            <li>Input sanitization and output escaping everywhere</li>
+            <li>Prepared SQL statements for all queries</li>
+            <li>File system security for uploads</li>
+            <li>GDPR-compliant data retention and cleanup</li>
+        </ul>
+        <h3>Extensibility</h3>
+        <ul>
+            <li>Hooks and filters for developers</li>
+            <li>Modular class structure for easy extension</li>
+            <li>Custom template and PDF overrides possible</li>
+        </ul>
+    </div>
+
+    <!-- Developer API -->
+    <div class="section" id="api">
+        <h2>Developer API</h2>
+        <h3>AJAX Endpoints</h3>
+        <ul>
+            <li><code>wp_ajax_generate_qr_code</code></li>
+            <li><code>wp_ajax_bulk_generate_qr_codes</code></li>
+            <li><code>wp_ajax_download_qr_code</code></li>
+            <li><code>wp_ajax_get_analytics_data</code></li>
+            <li><code>wp_ajax_get_product_url</code></li>
+            <li><code>wp_ajax_check_system_status</code></li>
+            <li><code>wp_ajax_install_qr_library</code></li>
+        </ul>
+        <h3>Hooks & Filters</h3>
+        <ul>
+            <li><code>wp_qr_generator_before_generate</code> (action)</li>
+            <li><code>wp_qr_generator_after_generate</code> (action)</li>
+            <li><code>wp_qr_generator_template_html</code> (filter)</li>
+        </ul>
+        <h3>Extending the Plugin</h3>
+        <ul>
+            <li>Use hooks to add custom analytics, modify templates, or trigger external integrations.</li>
+            <li>Override template files in <code>includes/</code> for custom layouts.</li>
+            <li>Integrate with other plugins via AJAX endpoints.</li>
+        </ul>
+    </div>
+
+    <!-- Troubleshooting & FAQ -->
+    <div class="section" id="troubleshooting">
+        <h2>Troubleshooting & FAQ</h2>
+        <h3>Common Issues</h3>
+        <ul>
+            <li><strong>Missing GD extension:</strong> Enable GD in your PHP configuration.</li>
+            <li><strong>File permissions:</strong> Ensure <code>wp-content/uploads/qr-codes/</code> is writable.</li>
+            <li><strong>WooCommerce not active:</strong> Activate WooCommerce before using the plugin.</li>
+            <li><strong>PDF not generating:</strong> Check server memory limits and TCPDF installation.</li>
+        </ul>
+        <h3>Debugging</h3>
+        <ul>
+            <li>Enable <code>WP_DEBUG</code> in <code>wp-config.php</code> for error logs (<a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/" target="_blank">WordPress Debugging Guide</a>).</li>
+            <li>Check the <code>logs/</code> directory for plugin error logs.</li>
+            <li>Use the <strong>System Status</strong> page in the plugin admin for diagnostics.</li>
+        </ul>
+        <h3>Support</h3>
+        <ul>
+            <li>Email: <a href="mailto:contact@brunobrottes.com">contact@brunobrottes.com</a></li>
+            <li>Website: <a href="https://brunobrottes.com" target="_blank">https://brunobrottes.com</a></li>
+        </ul>
+    </div>
+
+    <!-- Changelog & Credits -->
+    <div class="section" id="changelog">
+        <h2>Changelog</h2>
+        <ul>
+            <li><strong>v1.0.0</strong>: Initial release, CodeCanyon-ready.</li>
+        </ul>
+    </div>
+    <div class="section credits" id="credits">
+        <h2>Credits</h2>
+        <ul>
+            <li>TCPDF (PDF library): <a href="https://tcpdf.org" target="_blank">https://tcpdf.org</a></li>
+            <li>WordPress, WooCommerce (core integration)</li>
+            <li>All code is original unless otherwise noted.</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>Thank you for choosing <strong>WordPress QR Code Generator Pro</strong>! For support, contact <a href="mailto:contact@brunobrottes.com">contact@brunobrottes.com</a>.</p>
+        <p>&copy; 2024 Bruno Brottes. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html> 

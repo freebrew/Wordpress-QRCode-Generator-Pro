@@ -1,0 +1,155 @@
+# WordPress QR Code Generator Translation Template
+# Copyright (C) 2024 WordPress QR Code Generator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress QR Code Generator 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-qr-generator\n"
+"POT-Creation-Date: 2024-01-01 00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-01-01 00:00:00+00:00\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: wordpress-qr-code-generator.php:50
+msgid "WordPress QR Code Generator requires WordPress 6.0 or higher."
+msgstr ""
+
+#: wordpress-qr-code-generator.php:55
+msgid "WordPress QR Code Generator requires WooCommerce to be installed and active."
+msgstr ""
+
+#: wordpress-qr-code-generator.php:60
+msgid "WordPress QR Code Generator requires PHP 7.4 or higher."
+msgstr ""
+
+#: admin/class-admin.php:35
+msgid "QR Code Generator"
+msgstr ""
+
+#: admin/class-admin.php:36
+msgid "QR Codes"
+msgstr ""
+
+#: admin/class-admin.php:46
+msgid "Dashboard"
+msgstr ""
+
+#: admin/class-admin.php:55
+msgid "Generate QR Codes"
+msgstr ""
+
+#: admin/class-admin.php:56
+msgid "Generate"
+msgstr ""
+
+#: admin/class-admin.php:65
+msgid "Analytics"
+msgstr ""
+
+#: admin/class-admin.php:74
+msgid "Settings"
+msgstr ""
+
+#: admin/views/dashboard.php:15
+msgid "QR Code Generator Dashboard"
+msgstr ""
+
+#: admin/views/dashboard.php:18
+msgid "Generate New QR Code"
+msgstr ""
+
+#: admin/views/dashboard.php:21
+msgid "View Analytics"
+msgstr ""
+
+#: admin/views/dashboard.php:29
+msgid "Total Scans (30 days)"
+msgstr ""
+
+#: admin/views/dashboard.php:33
+msgid "Unique Visitors"
+msgstr ""
+
+#: admin/views/dashboard.php:37
+msgid "Conversions"
+msgstr ""
+
+#: admin/views/dashboard.php:41
+msgid "Revenue Generated"
+msgstr ""
+
+#: admin/views/dashboard.php:45
+msgid "Conversion Rate"
+msgstr ""
+
+#: public/class-shortcodes.php:45
+msgid "QR Code data is required."
+msgstr ""
+
+#: public/class-shortcodes.php:103
+msgid "Product not found."
+msgstr ""
+
+#: public/class-shortcodes.php:137
+msgid "Insufficient permissions to view analytics."
+msgstr ""
+
+#: public/class-widgets.php:18
+msgid "QR Code Generator"
+msgstr ""
+
+#: public/class-widgets.php:20
+msgid "Display QR codes for products or custom content"
+msgstr ""
+
+#: includes/class-analytics.php:180
+msgid "Total Scans"
+msgstr ""
+
+#: includes/class-analytics.php:181
+msgid "Unique Scans"
+msgstr ""
+
+#: includes/class-analytics.php:182
+msgid "Conversions"
+msgstr ""
+
+#: includes/class-analytics.php:183
+msgid "Conversion Rate"
+msgstr ""
+
+#: includes/class-analytics.php:219
+msgid "Daily Scans"
+msgstr ""
+
+#: includes/class-analytics.php:235
+msgid "No scan data available."
+msgstr ""
+
+#: includes/class-analytics.php:247
+msgid "Top Performing QR Codes"
+msgstr ""
+
+#: includes/class-analytics.php:251
+msgid "QR Code"
+msgstr ""
+
+#: includes/class-analytics.php:252
+msgid "Scans"
+msgstr ""
+
+#: includes/class-analytics.php:253
+msgid "Conversions"
+msgstr ""
+
+#: includes/class-analytics.php:254
+msgid "Rate"
+msgstr ""
+
+#: includes/class-analytics.php:268
+msgid "No QR code data available."
+msgstr "" 
